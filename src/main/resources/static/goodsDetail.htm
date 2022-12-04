@@ -84,7 +84,7 @@ id="countDown"
         }
     );
     function refreshCaptcha() {
-        $("#captchaImg").attr("src","/seckill/captcha?goodsId" + $("#goodsId").val() + "&time=" + new Date());
+        $("#captchaImg").attr("src","/seckill/captcha?goodsId=" + $("#goodsId").val() + "&time=" + new Date());
     }
     function getSeckillPath() {
         var goodsId = $("#goodsId").val();
@@ -186,7 +186,7 @@ id="countDown"
                 clearTimeout(timeout);
             }
             $("#seckillTip").html("秒杀进行中");
-            $("#captchaImg").attr("src","/seckill/captcha?goodsId" + $("#goodsId").val() + "&time=" + new Date());
+            $("#captchaImg").attr("src","/seckill/captcha?goodsId=" + $("#goodsId").val() + "&time=" + new Date());
             $("#captchaImg").show();
             $("#captcha").show();
             //秒杀已经结束

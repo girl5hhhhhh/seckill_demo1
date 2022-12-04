@@ -28,7 +28,7 @@ class SeckillDemo1ApplicationTests {
 		if(isLock){
 			valueOperations.set("name","xxxx");
 			String name = (String) valueOperations.get("name");
-			System.out.println("name = " + name);
+//			System.out.println("name = " + name);
 			//报异常，锁不能删除
 			Integer.parseInt("xxxxx");
 			//操作结束，删除锁
@@ -47,7 +47,7 @@ class SeckillDemo1ApplicationTests {
 		if(isLock){
 			valueOperations.set("name","xxxx");
 			String name = (String) valueOperations.get("name");
-			System.out.println("name = " + name);
+//			System.out.println("name = " + name);
 			//报异常，锁不能删除
 			Integer.parseInt("xxxxx");
 			//操作结束，删除锁
@@ -65,9 +65,9 @@ class SeckillDemo1ApplicationTests {
 		Boolean isLock = valueOperations.setIfAbsent("k1", value,5, TimeUnit.SECONDS);
 		if(isLock){
 			valueOperations.set("name","xxxx");
-			String name = (String) valueOperations.get("name");
-			System.out.println("name = " + name);
-			System.out.println(valueOperations.get("k1"));
+//			String name = (String) valueOperations.get("name");
+//			System.out.println("name = " + name);
+//			System.out.println(valueOperations.get("k1"));
 			Boolean result = (Boolean) redisTemplate.execute(script, Collections.singletonList("k1"), value);
 			System.out.println(result);
 		}else {

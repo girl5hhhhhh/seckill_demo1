@@ -1,3 +1,5 @@
+package com.example.seckill.service.iml;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.seckill.mapper.SeckillOrderMapper;
